@@ -13,16 +13,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
-  var tl=gsap.timeline({repeat:0});
-  tl.from("#page1 h3",{visibility:"hidden"})
-  tl.from("#page1 button",{visibility:"hidden"})
-  tl.from("#page1",{opacity:"hidden"});
-  tl.from("#page1 img",{xPercent:140});
-  tl.from("#page1 .text h1",{xPercent:-135,delay:0})
-  tl.to("#page1 img",{xPercent:0,duration:1.5, ease:Power2.easeInOut})
-  tl.to("#page1 .text h1",{xPercent:0, duration:1,delay:0.1})
-  tl.to("#page1 h3",{visibility:"visible", duration:1,ease:Power2.ease})
-  tl.to("#page1 button",{visibility:"visible", duration:1,ease:Power2.ease})
+  // var tl=gsap.timeline({repeat:0});
+  // tl.from("#page1 h3",{visibility:"hidden"})
+  // tl.from("#page1 button",{visibility:"hidden"})
+  // tl.from("#page1",{opacity:"hidden"});
+  // tl.from("#page1 img",{xPercent:140});
+  // tl.from("#page1 .text h1",{xPercent:-135,delay:0})
+  // tl.to("#page1 img",{xPercent:0,duration:1.5, ease:Power2.easeInOut})
+  // tl.to("#page1 .text h1",{xPercent:0, duration:1,delay:0.1})
+  // tl.to("#page1 h3",{visibility:"visible", duration:1,ease:Power2.ease})
+  // tl.to("#page1 button",{visibility:"visible", duration:1,ease:Power2.ease})
 
 
   useEffect(()=>{
@@ -43,7 +43,7 @@ function App() {
           <button>Login</button>
         </nav>
         <div id="page1" >
-          <div className="text">
+          <div className="text" data-aos="fade-right" data-aos-duration="1200" >
               <h1>YOUR FEET <br />DESERVES <br />THE BEST</h1>
               <h3 >YOUR FEET DESERVE THE BEST AND WE'RE HERE TO HELP YOU WITH OUR SHOES.YOUR FEET DESERVE THE BEST AND WE'RE HERE TO HELP YOU WITH OUR SHOES.</h3>
               <div className="button">
@@ -52,7 +52,7 @@ function App() {
               </div>
           </div>
           <div className="img">
-            <img src="./shoe_image.png" alt="shoe" />
+            <img data-aos="fade-left" data-aos-duration="1200" src="./shoe_image.png" alt="shoe" />
           </div>
         </div>
         <div id="page2">
@@ -63,10 +63,10 @@ function App() {
         </div>
         <div id="page3">
           <div className="show">
-            <div >
+            <div data-aos="zoom-in" data-aos-duration="1200">
               <Spline  scene="https://prod.spline.design/x0iWypMVk2o1NEJu/scene.splinecode" />
             </div>
-            <div className="text">
+            <div className="text" data-aos="fade-left" data-aos-duration="1200">
               <h2 >The Latest</h2>
               <h1 >NEW 360@ VIEW</h1>
               <h6>CHOOSE THE BEST FIT FOR YOU</h6>
