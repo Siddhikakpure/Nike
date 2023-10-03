@@ -2,6 +2,7 @@
 # Making Nike More fun using Reactjs + vite
 
 
+![brand_logo](https://github.com/Siddhikakpure/Nike/assets/100514453/6bf49788-fd95-4be1-b636-89f2b93cc9e0)
 
 
 ## Overview
