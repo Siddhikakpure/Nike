@@ -13,20 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 
-  // var tl=gsap.timeline({repeat:0});
-  // tl.from("#page1 h3",{visibility:"hidden"})
-  // tl.from("#page1 button",{visibility:"hidden"})
-  // tl.from("#page1",{opacity:"hidden"});
-  // tl.from("#page1 img",{xPercent:140});
-  // tl.from("#page1 .text h1",{xPercent:-135,delay:0})
-  // tl.to("#page1 img",{xPercent:0,duration:1.5, ease:Power2.easeInOut})
-  // tl.to("#page1 .text h1",{xPercent:0, duration:1,delay:0.1})
-  // tl.to("#page1 h3",{visibility:"visible", duration:1,ease:Power2.ease})
-  // tl.to("#page1 button",{visibility:"visible", duration:1,ease:Power2.ease})
-
-
   useEffect(()=>{
-    AOS.init();
+    AOS.init({disable:window.innerWidth<=500});
   },[])
 
   return (
@@ -58,15 +46,13 @@ function App() {
         <div id="page2">
           <img src="./jordan.webp" alt="jordan" />
           <div className="display">
-            <h1>Jordan LiFe StyLe </h1>
+            <h1>Jordan LiFe </h1>
           </div>
         </div>
         <div id="page3">
           <div className="show">
-            <div data-aos="zoom-in" data-aos-duration="1200">
-              <Spline  scene="https://prod.spline.design/x0iWypMVk2o1NEJu/scene.splinecode" />
-            </div>
-            <div className="text" data-aos="fade-left" data-aos-duration="1200">
+              <Spline data-aos="zoom-in" data-aos-duration="1200"  id='Spline' scene="https://prod.spline.design/x0iWypMVk2o1NEJu/scene.splinecode" />
+            <div data-aos="fade-left" data-aos-duration="1200"  className="text" >
               <h2 >The Latest</h2>
               <h1 >NEW 360@ VIEW</h1>
               <h6>CHOOSE THE BEST FIT FOR YOU</h6>
@@ -76,16 +62,16 @@ function App() {
         </div>
         <div id="page4">
           <h4>Featured</h4>
-          <div className="display">
+          <div className="display" >
             <div  data-aos="fade-in" data-aos-duration="3000" className="retro_edit">
-              <img height={580} src="./retro_edit.webp" alt="retrokids" />
+              <img  src="./retro_edit.webp" alt="retrokids" />
               <div className='inner'>
                 <h2>SHOP RETRO EDIT</h2>
                 <button><a href="https://www.nike.com/in/w/head-to-toe-looks-3oae9">SHOP THE LOOK</a></button>
               </div>
             </div>
             <div data-aos="fade-in" data-aos-duration="3000" className="retro_sneakers">
-              <img height={580}  src="./retro_sneaker.webp" alt="retroSneaker" />
+              <img src="./retro_sneaker.webp" alt="retroSneaker" />
               <div className='inner'>
                 <h2>ON_TREND RETRO SNEAKER</h2>
                 <button><a href="https://www.nike.com/in/w/retro-running-8kemk">SHOP SNEAKER</a></button>
@@ -148,7 +134,6 @@ function App() {
           </div>
         </footer>
       </div>
-      
     </>
   )
 }
